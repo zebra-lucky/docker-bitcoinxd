@@ -16,8 +16,8 @@ RUN chown bitcoin:bitcoin -R /bitcoin
 
 ADD https://github.com/bitcoinx-project/bitcoinx/releases/download/v0.16.2/bitcoinx-0.16.2-x86_64-linux-gnu.tar.gz /tmp/
 RUN tar -xzvf /tmp/bitcoinx-* -C /tmp/ \
-    && cp /tmp/bitcoinx-0*//bin/*  /usr/local/bin \
-    && cp /tmp/bitcoin-0*/lib/*  /usr/local/lib \
+    && cp /tmp/bitcoinx-0*/bin/*  /usr/local/bin \
+    && cp /tmp/bitcoinx-0*/lib/*  /usr/local/lib \
     && rm -rf /tmp/bitcoinx-0*
 
 ADD ./bin /usr/local/bin
