@@ -3,7 +3,7 @@
 set -ex
 
 # Generate bitcoinx.conf
-btc_init
+btx_init
 
 if [ $# -gt 0 ]; then
     args=("$@")
